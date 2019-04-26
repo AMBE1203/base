@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">File Recovery</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_passcode">Enter Passcode</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+
+    <string name="pinlock_title">Enter Pin Code</string>
+    <string name="pinlock_settitle">Set Pin Code</string>
+    <string name="pinlock_firsttry">Wrong Pin Code: First Try</string>
+    <string name="pinlock_secondtry">Wrong Pin Code: Second Try</string>
+    <string name="pinlock_wrongpin">Wrong Pin code</string>
+    <string name="pinlock_secondPin">Enter Pin Code Again</string>
+    <string name="pinlock_tryagain">Pin Codes Are Not The Same</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="correct_password">Correct password</string>
+    <string name="enter_your_password"><font size="15">Enter your password</font></string>
+    <string name="night_mode">Night Mode</string>
+    <string name="premium_account">Premium Account</string>
+    <string name="notify_when_battery_s_full">Notify when battery\'s full</string>
+    <string name="set_up_recovery_email">Set up Recovery Email</string>
+    <string name="set_now">Set now</string>
+    <string name="set_account_password">Set Account Password</string>
+    <string name="you_dont_n_create_account_password">You dont\'n create account password.</string>
+    <string name="no_email_recovery_yet">(No email recovery yet)</string>
+    <string name="change_account_password">Change Account Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="edit">Edit</string>
+    <string name="upgrade_to_v_i_p_account_for_get_full_access">Upgrade to V.I.P account for get full access</string>
+    <string name="_90_days">90 days</string>
+    <string name="_30_days">30 days</string>
+    <string name="auto_clear_setting">Auto Clear setting</string>
+    <string name="_7_days">7 days</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="set_your_password">Set your password</string>
+    <string name="re_new_password"><font size="16">Re-new password</font></string>
+    <string name="new_password"><font size="16">New password</font></string>
+    <string name="new_pass_must">New password must not same old password</string>
+    <string name="correcr_password">Correct password</string>
+    <string name="not_correct_pass">Not correct password</string>
+    <string name="change_your_password">Change your password</string>
+    <string name="password_includes_4_number">Password includes 4 number</string>
+    <string name="search_for_title_time_format_files"><font size="14">Search for title, time, format files</font></string>
+</resources>

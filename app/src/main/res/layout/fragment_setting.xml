@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.ambe.filerecovery.ui.setting.SettingFragment.SettingHandler" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ambe.filerecovery.ui.view.ImageClickAnimView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:onClick="@{()->handler.onClickBack()}"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_back"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_weight="1"
+                android:text="Settings"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgPremium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                app:srcCompat="@drawable/ic_premium"
+                tools:ignore="VectorDrawableCompat" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toEndOf="@id/imgPremium">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_premium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/premium_account"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="14sp"
+                    tools:ignore="DuplicateIds" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_premium"
+                    android:text="@string/upgrade_to_v_i_p_account_for_get_full_access"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_7sdp"
+                app:srcCompat="@drawable/ic_select"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:background="@color/colorLine" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()-> handler.onClickAutoClear()}"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgTrash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_trash"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toStartOf="@id/textEdit"
+                android:layout_toEndOf="@id/imgTrash">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Clear (30 days)"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textClear"
+                    android:text="@string/notify_when_battery_s_full"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/edit"
+                android:textAllCaps="true"
+                android:textColor="@color/colorOrange" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:background="@color/colorLine" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+
+                android:id="@+id/imgTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_night_mode"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toEndOf="@id/imgTheme">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/night_mode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchNightMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:padding="@dimen/_7sdp"
+                android:theme="@style/SwitchTheme"
+                android:thumb="@drawable/switch_toggle"
+                app:trackTint="@drawable/switch_track" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+
+                android:id="@+id/imgEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_email"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toStartOf="@id/textSetNow"
+                android:layout_toEndOf="@id/imgEmail">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_up_recovery_email"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textEmail"
+                    android:lines="1"
+                    android:text="@string/no_email_recovery_yet"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textSetNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/set_now"
+                android:textAllCaps="true"
+                android:textColor="@color/colorOrange" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:id="@+id/reloutShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgSetPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_lock"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toEndOf="@id/imgSetPass">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textSetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_account_password"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textSetPass"
+                    android:lines="1"
+                    android:text="@string/you_dont_n_create_account_password"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchSetPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:padding="@dimen/_7sdp"
+                android:theme="@style/SwitchTheme"
+                android:thumb="@drawable/switch_toggle"
+                app:trackTint="@drawable/switch_track" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:onClick="@{()-> handler.onClickChangeAccountPass()}"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_change_pass"
+                tools:ignore="VectorDrawableCompat" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toEndOf="@id/imgChange">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_account_password"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_select" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:onClick="@{()-> handler.onClickReset()}"
+            android:padding="@dimen/_10sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_reset"
+                tools:ignore="VectorDrawableCompat" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_toEndOf="@id/imgChangePass">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset_password"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ambe.filerecovery.ui.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_passcodeFragment"
+            app:destination="@id/passcodeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.ambe.filerecovery.ui.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_layoutsFragment"
+            app:destination="@id/layoutsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.ambe.filerecovery.ui.setting.SettingFragment"
+        android:label="SettingFragment">
+        <action
+            android:id="@+id/action_settingFragment_to_passcodeFragment"
+            app:destination="@id/passcodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passcodeFragment"
+        android:name="com.ambe.filerecovery.ui.passcode.PasscodeFragment"
+        android:label="PasscodeFragment">
+        <action
+            android:id="@+id/action_passcodeFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/passcodeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/layoutsFragment"
+        android:name="com.ambe.filerecovery.ui.layouts.LayoutsFragment"
+        android:label="LayoutsFragment">
+        <argument
+            android:name="type"
+            android:defaultValue="no_type" />
+    </fragment>
+</navigation>
